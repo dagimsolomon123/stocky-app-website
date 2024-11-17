@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const reasons = [
+  {
+    title: "Track Inventory Levels",
+    description:
+      "Monitor stock levels in real-time to avoid overstocking or running out of essential items.",
+    icon: "bx:bxs-bar-chart-alt-2",
+  },
+  {
+    title: "Improve Accuracy",
+    description:
+      "Reduce human error by automating inventory tracking and updating stock records automatically.",
+    icon: "bx:bxs-check-circle",
+  },
+  {
+    title: "Optimize Storage",
+    description:
+      "Analyze inventory usage to make the most efficient use of storage space and improve warehouse management.",
+    icon: "bx:bxs-package",
+  },
+  {
+    title: "Seamless Integration",
+    description:
+      "Integrate with other tools like POS systems, accounting software, and e-commerce platforms for a unified workflow.",
+    icon: "bx:bxs-plug",
+  },
+  {
+    title: "Forecast Demand",
+    description:
+      "Use historical data and trends to predict future inventory needs, ensuring you're always prepared.",
+    icon: "bx:bx-line-chart", // Changed to a valid 'line-chart' icon from the same library
+  },
+  {
+    title: "Enhance Customer Satisfaction",
+    description:
+      "Avoid delays and fulfill orders efficiently by ensuring products are always in stock when needed.",
+    icon: "bx:bxs-heart",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    WHY YOU NEED AN INVENTORY MANAGEMENT SYSTEM?
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    An inventory management system streamlines your business operations, saving time and reducing costs while improving accuracy.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    reasons.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
